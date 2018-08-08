@@ -69,17 +69,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
 
-                            <!-- Messages: style can be found in dropdown.less-->
-                            <li class="dropdown messages-menu"
-                                ng-include="'template/mensajes.html'">
-                            </li>
-                            <!-- /.messages-menu -->
-
-                            <!-- Notifications Menu -->
-                            <li class="dropdown notifications-menu"
-                                ng-include="'template/notificaciones.html'">
-                            </li>
-
                             <!-- User Account Menu -->
                             <li class="dropdown user user-menu"
                                 ng-include="'template/usuario.html'">
@@ -154,17 +143,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Controladores -->
         <script src="angular/app.js"></script>
         <script src="angular/controladores/dashboardCtrl.js"></script>
-        <script src="angular/controladores/clientesCtrl.js"></script>
-        <script src="angular/controladores/facturasCtrl.js"></script>
 
 
         <!-- servicios -->
         <script src="angular/servicios/configuracion_service.js"></script>
-        <script src="angular/servicios/mensajes_service.js"></script>
-        <script src="angular/servicios/notificaciones_service.js"></script>
-        <script src="angular/servicios/clientes_service.js"></script>
-        <script src="angular/servicios/factura_service.js"></script>
-
 
         <!-- Plugins -->
         <script src="plugins/sweetalert/sweetalert.min.js"></script>
