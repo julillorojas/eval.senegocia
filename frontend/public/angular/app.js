@@ -35,7 +35,6 @@ app.controller('mainCtrl', [
                             $scope.cargando = false;
                             $scope.mensaje = data.mensaje;
                         } else {
-//                            console.log(data.mensaje);
                             window.location = data.url;
                         }
                     });

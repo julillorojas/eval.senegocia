@@ -1,6 +1,5 @@
 var app = angular.module('evaluacionApp.configuracion', []);
 
-
 app.factory('Configuracion', ['$http', '$q', function ($http, $q) {
 
         var self = {
@@ -16,7 +15,6 @@ app.factory('Configuracion', ['$http', '$q', function ($http, $q) {
                             self.config = data;
                             d.resolve();
 
-
                         })
                         .error(function () {
 
@@ -28,10 +26,7 @@ app.factory('Configuracion', ['$http', '$q', function ($http, $q) {
                 return d.promise;
             }
 
-
-
         };
-
 
         return self;
 

@@ -3,12 +3,9 @@ var app = angular.module('evaluacionApp.dashboardCrtl', []);
 // ================================================
 //   Controlador de clientes
 // ================================================
-app.controller('dashboardCtrl', ['$scope', function($scope){
-	
+app.controller('dashboardCtrl', ['$scope', function ($scope) {
 
-	$scope.activar('mDashboard','','Dashboard','información');
+        $scope.activar('mDashboard', '', 'Dashboard', 'información');
 
-
-
-
-}]);
+    }
+]);

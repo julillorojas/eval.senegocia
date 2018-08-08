@@ -6,7 +6,6 @@
 ini_set('display_errors', 0);
 
 session_start();
-require_once("../clases/class.Database.php");
 
 
 $postdata = file_get_contents("php://input");

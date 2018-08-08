@@ -149,7 +149,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- servicios -->
         <script src="angular/servicios/configuracion_service.js"></script>
         <script src="angular/servicios/posts_service.js"></script>
-        
+
         <!-- components -->
         <script src="angular/components/posts-list.component.js"></script>
         <script src="angular/components/post-content.component.js"></script>

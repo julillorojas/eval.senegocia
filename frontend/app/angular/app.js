@@ -11,17 +11,14 @@ var app = angular.module('evaluacionApp', [
     'evaluacionApp.postComments',
 ]);
 
-angular.module('jcs-autoValidate')
-        .run([
-            'defaultErrorMessageResolver',
-            function (defaultErrorMessageResolver) {
-                // To change the root resource file path
-                defaultErrorMessageResolver.setI18nFileRootPath('angular/lib');
-                defaultErrorMessageResolver.setCulture('es-co');
-            }
-        ]);
-
-
+angular.module('jcs-autoValidate').run([
+    'defaultErrorMessageResolver',
+    function (defaultErrorMessageResolver) {
+        // To change the root resource file path
+        defaultErrorMessageResolver.setI18nFileRootPath('angular/lib');
+        defaultErrorMessageResolver.setCulture('es-co');
+    }
+]);
 
 app.controller('mainCtrl', ['$scope', 'Configuracion', function ($scope, Configuracion) {
 
@@ -30,19 +27,13 @@ app.controller('mainCtrl', ['$scope', 'Configuracion', function ($scope, Configu
         $scope.titulo = "";
         $scope.subtitulo = "";
 
-
-
         $scope.usuario = {
             nombre: "Juan Lillo"
         }
 
-
-
-
         Configuracion.cargar().then(function () {
             $scope.config = Configuracion.config;
         });
-
 
         // ================================================
         //   Funciones Globales del Scope
@@ -59,9 +50,8 @@ app.controller('mainCtrl', ['$scope', 'Configuracion', function ($scope, Configu
 
         };
 
-
-
-    }]);
+    }
+]);
 
 // ================================================
 //   Directivas
@@ -79,8 +69,6 @@ app.directive('enterKey', function () {
         });
     };
 });
-
-
 
 // ================================================
 //   Rutas
@@ -104,8 +92,8 @@ app.config(['$routeProvider', function ($routeProvider) {
                     redirectTo: '/'
                 });
 
-    }]);
-
+    }
+]);
 
 // ================================================
 //   Filtros
@@ -120,19 +108,17 @@ app.filter('quitarletra', function () {
                 return palabra;
         }
     };
-})
+}).filter('mensajecorto', function () {
 
-        .filter('mensajecorto', function () {
-
-            return function (mensaje) {
-                if (mensaje) {
-                    if (mensaje.length > 35)
-                        return mensaje.substr(0, 35) + "...";
-                    else
-                        return mensaje;
-                }
-            };
-        });
+    return function (mensaje) {
+        if (mensaje) {
+            if (mensaje.length > 35)
+                return mensaje.substr(0, 35) + "...";
+            else
+                return mensaje;
+        }
+    };
+});
 
 
 
