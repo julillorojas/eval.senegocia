@@ -45,7 +45,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     </head>
 
-    <body class="hold-transition skin-purple sidebar-mini">
+    <body class="hold-transition skin-purple sidebar-mini fixed">
         <div class="wrapper">
 
             <!-- Main Header -->
@@ -143,10 +143,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Controladores -->
         <script src="angular/app.js"></script>
         <script src="angular/controladores/dashboardCtrl.js"></script>
-
+        <script src="angular/controladores/postCtrl.js"></script>
 
         <!-- servicios -->
         <script src="angular/servicios/configuracion_service.js"></script>
+        <script src="angular/servicios/posts_service.js"></script>
+        
+        <!-- components -->
+        <script src="angular/components/post-list.component.js"></script>
 
         <!-- Plugins -->
         <script src="plugins/sweetalert/sweetalert.min.js"></script>

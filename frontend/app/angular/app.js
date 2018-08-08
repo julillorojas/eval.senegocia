@@ -2,6 +2,9 @@ var app = angular.module('evaluacionApp', [
     'ngRoute', 'jcs-autoValidate',
     'evaluacionApp.configuracion',
     'evaluacionApp.dashboardCrtl',
+    'evaluacionApp.postCtrl',
+    'evaluacionApp.posts',
+    'evaluacionApp.postList',
 ]);
 
 angular.module('jcs-autoValidate')
@@ -84,6 +87,10 @@ app.config(['$routeProvider', function ($routeProvider) {
                 .when('/', {
                     templateUrl: 'dashboard/dashboard.html',
                     controller: 'dashboardCtrl'
+                })
+                .when('/posts', {
+                    templateUrl: 'posts/posts.html',
+                    controller: 'postCtrl'
                 })
                 .otherwise({
                     redirectTo: '/'
