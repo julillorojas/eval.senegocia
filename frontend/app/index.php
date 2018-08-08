@@ -143,6 +143,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Controladores -->
         <script src="angular/app.js"></script>
         <script src="angular/controladores/dashboardCtrl.js"></script>
+        <script src="angular/controladores/postsListCtrl.js"></script>
         <script src="angular/controladores/postCtrl.js"></script>
 
         <!-- servicios -->
@@ -150,12 +151,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="angular/servicios/posts_service.js"></script>
         
         <!-- components -->
-        <script src="angular/components/post-list.component.js"></script>
+        <script src="angular/components/posts-list.component.js"></script>
+        <script src="angular/components/post-content.component.js"></script>
+        <script src="angular/components/post-owner.component.js"></script>
+        <script src="angular/components/post-comments.component.js"></script>
 
         <!-- Plugins -->
-        <script src="plugins/sweetalert/sweetalert.min.js"></script>
         <link rel="stylesheet" href="plugins/sweetalert/sweetalert.css">
-
+        <script src="plugins/sweetalert/sweetalert.min.js"></script>
+        <script src="plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
         <!-- Optionally, you can add Slimscroll and FastClick plugins.
              Both of these plugins are recommended to enhance the
              user experience. Slimscroll is required when using the

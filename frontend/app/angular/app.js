@@ -3,8 +3,12 @@ var app = angular.module('evaluacionApp', [
     'evaluacionApp.configuracion',
     'evaluacionApp.dashboardCrtl',
     'evaluacionApp.postCtrl',
+    'evaluacionApp.postsListCtrl',
     'evaluacionApp.posts',
-    'evaluacionApp.postList',
+    'evaluacionApp.postsList',
+    'evaluacionApp.postOwner',
+    'evaluacionApp.postContent',
+    'evaluacionApp.postComments',
 ]);
 
 angular.module('jcs-autoValidate')
@@ -90,6 +94,10 @@ app.config(['$routeProvider', function ($routeProvider) {
                 })
                 .when('/posts', {
                     templateUrl: 'posts/posts.html',
+                    controller: 'postsListCtrl'
+                })
+                .when('/posts/:id', {
+                    templateUrl: 'posts/post.html',
                     controller: 'postCtrl'
                 })
                 .otherwise({
